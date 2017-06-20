@@ -1,0 +1,770 @@
+body {
+	background: #58585a url('../images/background.jpg') no-repeat center top;
+	background-size: cover;
+	font-family: 'Maven Pro', sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility:hidden;
+}
+
+#opentab {
+	background: #FFF;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 30px 0 20px;
+	position: absolute;
+	margin-left: 350px;
+	top: 45px;
+	border-radius: 16px 16px 0 0;
+	color: rgba(88, 88, 90, 0.69);
+	font-size: 14px;
+	letter-spacing: 0.1rem;
+}
+	#opentab:before {
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 48px 29px;
+		border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #FFF rgba(0, 0, 0, 0);
+		position: absolute;
+		left: -26px;
+		top: 7px;
+	}
+	#opentab:after {
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 48px 0 0 29px;
+		border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0)  rgba(0, 0, 0, 0) #FFF;
+		position: absolute;
+		right: -26px;
+		top: 7px;
+	}
+
+#openbar {
+	width: 100%;
+	height: 60px;
+	margin: 20px 0 0;
+	padding: 0 20px;
+	position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+	#openbar nav {
+		background-color: rgba(0, 0, 0, 0.05);
+		height: 40px;
+		padding: 0 7px;
+		width: 100%;
+		border-radius: 5px;
+		box-shadow: inset 0 -1px rgba(255, 255, 255, 0.5), 0 -1px 0px rgba(0, 0, 0, 0.15), 0 1px 0px rgba(0, 0, 0, 0.15);
+	}
+		#openbar nav input {
+			width: calc(100% - 85px);
+			margin-top: 5px;
+			border: 1px solid rgba(121, 121, 121, 0.27);
+			border-radius: 3px;
+			padding: 5px 10px 6px;
+			line-height: 1;
+			outline: none;
+		}
+		#openbar nav button {
+			outline: none;
+			border: 1px solid transparent;
+			border-radius: 3px;
+			padding: 6px 10px 7px;
+			line-height: 1;
+			background-color: transparent;
+			color: rgba(0, 0, 0, 0.7);
+		}
+			#openbar nav button:hover {
+				border-color: rgba(0, 0, 0, 0.15);
+				box-shadow: 0 1px 0px rgba(0, 0, 0, 0.04), inset 0 1px rgba(255, 255, 255, 0.7);
+			}
+			#openbar nav button:active {
+				border-color: rgba(0, 0, 0, 0.15);
+				background-color: rgba(0,0,0,.1);
+				box-shadow: 0 0px 0px rgba(0, 0, 0, 0.04), inset 0 1px rgba(0, 0, 0, 0.3);
+			}
+
+
+
+.wrap {
+	background-color: #FFF;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.7), inset 293px 0 0 0 #58585A, inset 294px 0 0 0 #4B4B4C, inset 295px 0 0 0 #434345;
+}
+
+	#sidebar {
+		background-color:#58585a;
+		width: inherit;
+		min-width: 295px;
+		max-width: 295px;
+		float: left;
+		height:100%;
+		position:relative;
+		overflow-y:auto;
+		overflow-x:hidden;
+		border-radius: 5px 0 0 5px;
+		min-height: 1000px;
+	}
+		#sidebar h3 {
+			height: 80px;
+			text-align: center;
+			background-color: rgba(255, 0, 0, 0);
+			border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+			line-height: 80px;
+			margin: 0 -15px 0;
+			font-family: "Khand", sans-serif;
+			font-weight: 700;
+			font-size: 26px;
+			color: #FFF;
+			letter-spacing: 0.01rem;
+			position: relative;
+			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.28);
+			box-shadow: 0 1px rgba(255, 255, 255, 0.05);
+		}
+			#sidebar h3 small {
+				position: absolute;
+				top: 55px;
+				left: 64px;
+				text-transform: uppercase;
+				font-family: 'Maven Pro', sans-serif;
+				font-size: 11px;
+				color: #7F7F88;
+				letter-spacing: 0.4rem;
+				font-weight: 700;
+				text-shadow: none;
+			}
+		#sidebar aside {
+			margin: 0 -15px 20px;
+			background: #58585a url('../images/background-body.jpg') repeat-x center bottom;
+			background-size: cover;
+			min-height: 300px;
+			padding-top: 35px;
+		}
+			#sidebar aside .latestproject {
+				position: relative;
+				width: 110px;
+				height: 110px;
+				margin: 0 auto 10px;
+				background-size: 110px 110px;
+				background-color: #F5F5F5;;
+				border-radius: 50%;
+				box-shadow: 0 3px 7px rgba(0, 0, 0, 0.27);
+			}
+				#sidebar aside .latestproject.wpone {
+					background-image: url('../images/wponelogo.png');
+				}
+			#sidebar aside .latestproject span {
+				display: block;
+				position: absolute;
+				right: -7px;
+				top: 1px;
+				background: #3D383C;
+				color: #FFF;
+				font-weight: 700;
+				padding: 5px 5px;
+				font-size: 14px;
+				line-height: 1;
+				border-radius: 50%;
+				box-shadow: 0 0 0 3px #5F5353;
+				cursor: default;
+			}
+			#sidebar aside h4 {
+				text-align: center;
+				color: #fff;
+				font-weight: 700;
+				text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+				margin-bottom: 30px;
+			}
+			#sidebar aside ul{
+			  width:295px;
+			  padding: 0;
+			  margin-bottom:20px;
+			  overflow:hidden;
+			  border-top:1px solid transparent;
+			}
+				#sidebar aside ul li{
+				  line-height:1.5em;
+				  border-bottom:1px solid transparent;
+				  float:left;
+				  display:inline;
+				  padding: 3px 20px;
+				}
+				#sidebar aside ul#double li  { width:50%;}
+					#sidebar aside ul li a {
+						display: block;
+						color: #A39A99;
+					}
+						#sidebar aside ul li a:hover {
+							text-decoration: none;
+						}
+							#sidebar aside ul li a i {
+								color: #fff;
+								display: inline-block;
+								width: 18px;
+								text-align: center;
+								font-size: 16px;
+							}
+			#bar {
+				width: 100%;
+				height: 3px;
+				background-color: #ffffff;
+				position: relative;
+			}
+				#bar span {
+					display: block;
+					background-color: #acd2eb;
+					position: relative;
+					height: 3px;
+					padding: 0 16px;
+				}
+					#bar span i {
+						display: block;
+						position: absolute;
+						right: 0;
+						top: -8px;
+						background-color: #F3F7F9;
+						line-height: 16px;
+						height: 16px;
+						font-style: normal;
+						font-weight: 700;
+						font-size: 12px;
+						padding: 0 3px;
+						color: #615555;
+						cursor: pointer;
+					}
+					#bar span i:before {
+						content: '';
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 0 0 16px 11px;
+						border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #F3F7F9 rgba(0, 0, 0, 0);
+						position: absolute;
+						left: -11px;
+						top: 0;
+					}
+					#bar span i:after {
+						content: '';
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 16px 11px 0 0;
+						border-color: #F3F7F9 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+						position: absolute;
+						right: -11px;
+						top: 0;
+					}
+
+	#sidebar aside #utility ul {
+		margin: 0 15px 20px;
+	}		
+	#sidebar aside #utility ul li {
+		margin: 0 5px;
+		padding: 0;
+	}		
+	#sidebar aside #utility ul li a {
+		background-repeat: no-repeat;
+		height: 32px;
+	}		
+	#sidebar aside #utility ul li a.wordpress { width: 32px; background-image: url('../images/utility/wordpress.png'); }		
+	#sidebar aside #utility ul li a.bbpress { width: 32px; background-image: url('../images/utility/bbpress.png'); }	
+	#sidebar aside #utility ul li a.html5 { width: 32px; background-image: url('../images/utility/html5.png'); }	
+	#sidebar aside #utility ul li a.css3 { width: 32px; background-image: url('../images/utility/css3.png'); }	
+
+	.mm-menu {
+		margin-top: 405px;
+		width: 100%;
+		background-color: #58585A;
+		border-radius: 0 0 0 5px;
+	}
+		.mm-listview > li > a {
+			padding: 10px 30px 10px 40px;
+		}
+			.mm-listview > li > a, 
+			.mm-listview > li > span {
+				color: #919192;
+				font-weight: 700;
+	  			font-size: 16px;
+			}
+				.mm-listview > li > a i, 
+				.mm-listview > li > span i {
+					color: #fff;
+					font-weight: 400;
+				}
+		.mm-menu > .mm-panel {
+			padding: 0;
+		}
+
+	em.mm-counter { 
+		right: 100px; 
+	}
+	.mm-menu em.mm-counter {
+		color: rgba(255, 255, 255, 0.2);
+		font-weight: 700;
+		background: rgba(2, 2, 2, 0.03);
+		padding: 0 10px;
+		border-radius: 3px;
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+	}
+	em.mm-counter + a.mm-next {
+		  margin-right: 20px;
+	}
+	.mm-menu.mm-pageshadow:after {
+		display: none;
+	}
+	.mm-listview > li:not(.mm-divider):after {
+		border-top-width: 1px;
+		border-top-style: solid;
+	}
+	.mm-menu .mm-listview > li:after {
+		border-bottom-color: rgba(255, 255, 255, 0.05);
+  		border-top-color: rgba(0, 0, 0, 0.05);
+	}
+	.mm-menu .mm-listview > li.mm-selected > a:not(.mm-next), 
+	.mm-menu .mm-listview > li.mm-selected > span {
+		background-color: rgba(255,255,255,0);
+		color: #fff;
+	}
+
+
+
+
+	#main {
+	  height:100%;
+	  overflow:auto;
+	}
+
+
+	.itemset {
+		margin-top: 15px;
+	}
+	.itemset .bg {
+		width: 100%;
+		height: 150px;
+		background-color: #9fb2a8;
+		border-radius: 5px 5px 0 0;
+	}
+	.itemset h4 {
+		background-color: #58585a;
+		margin-top: 0;
+		color: #fff;
+		font-weight: 700;
+		padding: 10px;
+		height: 120px;
+		border-radius: 0 0 5px 5px;
+	}
+		.itemset h4 small {
+			display: block;
+			margin-top: 10px;
+			color: #A2A2A3;
+			font-weight: 700;
+			font-size: 16px;
+		}
+	ul.itemsetoption {
+		margin: -10px 0 0;
+		list-style: none;
+		width: 100%;
+		display: block;
+		padding: 0;
+		border-bottom: 1px solid #ececec;
+	}
+		ul.itemsetoption li {
+			float: left;
+			display: block;
+		}
+			ul.itemsetoption li a {
+				margin: 0 15px;
+				color: #bfc0c0;
+				display: inline-block;
+				line-height: 1;
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 18px 0;
+			}
+			ul.itemsetoption li.active a { color: #25aae1; }
+			ul.itemsetoption li:first-child a { margin-left: 0; }
+
+
+.box {
+	background-color: #eee;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 5px;
+}
+	.box h2 {
+		font-size: 120px;
+		font-family: "Khand", sans-serif;
+		line-height: 1;
+		margin: 0;
+		color: #fff;
+		padding: 30px 0px 18px;
+		letter-spacing: 0.5rem;
+		font-weight: 700;
+	}
+	.box h2 small {
+		line-height: 1;
+		color: rgba(255, 255, 255, 0.51);
+		font-family: 'Maven Pro', sans-serif;
+		font-size: 18px;
+		display: block;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-shadow: none;
+	}
+	.box.danger { 
+		background-color: #F44336;
+text-shadow: rgb(222, 61, 49) 1px 1px,
+    rgb(222, 61, 49) 2px 2px,
+    rgb(222, 61, 49) 3px 3px,
+    rgb(222, 61, 49) 4px 4px,
+    rgb(222, 61, 49) 5px 5px,
+    rgb(222, 61, 49) 6px 6px,
+    rgb(222, 61, 49) 7px 7px,
+    rgb(222, 61, 49) 8px 8px,
+    rgb(222, 61, 49) 9px 9px,
+    rgb(223, 61, 49) 10px 10px,
+    rgb(223, 61, 49) 11px 11px,
+    rgb(223, 61, 49) 12px 12px,
+    rgb(223, 61, 49) 13px 13px,
+    rgb(223, 61, 49) 14px 14px,
+    rgb(223, 61, 49) 15px 15px,
+    rgb(223, 61, 49) 16px 16px,
+    rgb(223, 61, 49) 17px 17px,
+    rgb(223, 61, 49) 18px 18px,
+    rgb(224, 61, 49) 19px 19px,
+    rgb(224, 61, 49) 20px 20px,
+    rgb(224, 61, 49) 21px 21px,
+    rgb(224, 61, 49) 22px 22px,
+    rgb(224, 61, 49) 23px 23px,
+    rgb(224, 61, 49) 24px 24px,
+    rgb(224, 61, 49) 25px 25px,
+    rgb(224, 61, 49) 26px 26px,
+    rgb(224, 61, 49) 27px 27px,
+    rgb(225, 61, 49) 28px 28px,
+    rgb(225, 61, 49) 29px 29px,
+    rgb(225, 61, 49) 30px 30px,
+    rgb(225, 61, 49) 31px 31px,
+    rgb(225, 61, 49) 32px 32px,
+    rgb(225, 61, 49) 33px 33px,
+    rgb(225, 62, 49) 34px 34px,
+    rgb(225, 62, 49) 35px 35px,
+    rgb(225, 62, 49) 36px 36px,
+    rgb(226, 62, 49) 37px 37px,
+    rgb(226, 62, 49) 38px 38px,
+    rgb(226, 62, 49) 39px 39px,
+    rgb(226, 62, 50) 40px 40px,
+    rgb(226, 62, 50) 41px 41px,
+    rgb(226, 62, 50) 42px 42px,
+    rgb(226, 62, 50) 43px 43px,
+    rgb(226, 62, 50) 44px 44px,
+    rgb(226, 62, 50) 45px 45px,
+    rgb(227, 62, 50) 46px 46px,
+    rgb(227, 62, 50) 47px 47px,
+    rgb(227, 62, 50) 48px 48px,
+    rgb(227, 62, 50) 49px 49px,
+    rgb(227, 62, 50) 50px 50px,
+    rgb(227, 62, 50) 51px 51px,
+    rgb(227, 62, 50) 52px 52px,
+    rgb(227, 62, 50) 53px 53px,
+    rgb(227, 62, 50) 54px 54px,
+    rgb(228, 62, 50) 55px 55px,
+    rgb(228, 62, 50) 56px 56px,
+    rgb(228, 62, 50) 57px 57px,
+    rgb(228, 62, 50) 58px 58px,
+    rgb(228, 62, 50) 59px 59px,
+    rgb(228, 62, 50) 60px 60px,
+    rgb(228, 62, 50) 61px 61px,
+    rgb(228, 62, 50) 62px 62px,
+    rgb(228, 62, 50) 63px 63px,
+    rgb(229, 62, 50) 64px 64px,
+    rgb(229, 62, 50) 65px 65px,
+    rgb(229, 62, 50) 66px 66px,
+    rgb(229, 63, 50) 67px 67px,
+    rgb(229, 63, 50) 68px 68px,
+    rgb(229, 63, 50) 69px 69px,
+    rgb(229, 63, 50) 70px 70px,
+    rgb(229, 63, 50) 71px 71px,
+    rgb(229, 63, 50) 72px 72px,
+    rgb(230, 63, 50) 73px 73px,
+    rgb(230, 63, 50) 74px 74px,
+    rgb(230, 63, 50) 75px 75px,
+    rgb(230, 63, 50) 76px 76px,
+    rgb(230, 63, 50) 77px 77px,
+    rgb(230, 63, 50) 78px 78px,
+    rgb(230, 63, 50) 79px 79px,
+    rgb(230, 63, 51) 80px 80px,
+    rgb(230, 63, 51) 81px 81px,
+    rgb(231, 63, 51) 82px 82px,
+    rgb(231, 63, 51) 83px 83px,
+    rgb(231, 63, 51) 84px 84px,
+    rgb(231, 63, 51) 85px 85px,
+    rgb(231, 63, 51) 86px 86px,
+    rgb(231, 63, 51) 87px 87px,
+    rgb(231, 63, 51) 88px 88px,
+    rgb(231, 63, 51) 89px 89px,
+    rgb(231, 63, 51) 90px 90px,
+    rgb(232, 63, 51) 91px 91px,
+    rgb(232, 63, 51) 92px 92px,
+    rgb(232, 63, 51) 93px 93px,
+    rgb(232, 63, 51) 94px 94px,
+    rgb(232, 63, 51) 95px 95px,
+    rgb(232, 63, 51) 96px 96px,
+    rgb(232, 63, 51) 97px 97px,
+    rgb(232, 63, 51) 98px 98px,
+    rgb(232, 63, 51) 99px 99px,
+    rgb(233, 64, 51) 100px 100px;
+	}
+	.box.info { 
+		background-color: #2196F3;
+ text-shadow: rgb(30, 137, 221) 1px 1px,
+    rgb(30, 137, 221) 2px 2px,
+    rgb(30, 137, 221) 3px 3px,
+    rgb(30, 137, 221) 4px 4px,
+    rgb(30, 137, 221) 5px 5px,
+    rgb(30, 137, 221) 6px 6px,
+    rgb(30, 137, 221) 7px 7px,
+    rgb(30, 137, 221) 8px 8px,
+    rgb(30, 137, 221) 9px 9px,
+    rgb(30, 137, 222) 10px 10px,
+    rgb(30, 137, 222) 11px 11px,
+    rgb(30, 137, 222) 12px 12px,
+    rgb(30, 137, 222) 13px 13px,
+    rgb(30, 137, 222) 14px 14px,
+    rgb(30, 137, 222) 15px 15px,
+    rgb(30, 138, 222) 16px 16px,
+    rgb(30, 138, 222) 17px 17px,
+    rgb(30, 138, 222) 18px 18px,
+    rgb(30, 138, 223) 19px 19px,
+    rgb(30, 138, 223) 20px 20px,
+    rgb(30, 138, 223) 21px 21px,
+    rgb(30, 138, 223) 22px 22px,
+    rgb(30, 138, 223) 23px 23px,
+    rgb(30, 138, 223) 24px 24px,
+    rgb(30, 138, 223) 25px 25px,
+    rgb(30, 138, 223) 26px 26px,
+    rgb(30, 138, 223) 27px 27px,
+    rgb(30, 138, 224) 28px 28px,
+    rgb(30, 138, 224) 29px 29px,
+    rgb(30, 138, 224) 30px 30px,
+    rgb(30, 139, 224) 31px 31px,
+    rgb(30, 139, 224) 32px 32px,
+    rgb(30, 139, 224) 33px 33px,
+    rgb(30, 139, 224) 34px 34px,
+    rgb(30, 139, 224) 35px 35px,
+    rgb(30, 139, 224) 36px 36px,
+    rgb(30, 139, 225) 37px 37px,
+    rgb(30, 139, 225) 38px 38px,
+    rgb(30, 139, 225) 39px 39px,
+    rgb(30, 139, 225) 40px 40px,
+    rgb(30, 139, 225) 41px 41px,
+    rgb(30, 139, 225) 42px 42px,
+    rgb(30, 139, 225) 43px 43px,
+    rgb(30, 139, 225) 44px 44px,
+    rgb(30, 139, 225) 45px 45px,
+    rgb(30, 139, 226) 46px 46px,
+    rgb(30, 140, 226) 47px 47px,
+    rgb(30, 140, 226) 48px 48px,
+    rgb(30, 140, 226) 49px 49px,
+    rgb(30, 140, 226) 50px 50px,
+    rgb(30, 140, 226) 51px 51px,
+    rgb(30, 140, 226) 52px 52px,
+    rgb(30, 140, 226) 53px 53px,
+    rgb(30, 140, 226) 54px 54px,
+    rgb(30, 140, 227) 55px 55px,
+    rgb(30, 140, 227) 56px 56px,
+    rgb(30, 140, 227) 57px 57px,
+    rgb(30, 140, 227) 58px 58px,
+    rgb(30, 140, 227) 59px 59px,
+    rgb(30, 140, 227) 60px 60px,
+    rgb(30, 140, 227) 61px 61px,
+    rgb(30, 141, 227) 62px 62px,
+    rgb(30, 141, 227) 63px 63px,
+    rgb(30, 141, 228) 64px 64px,
+    rgb(30, 141, 228) 65px 65px,
+    rgb(30, 141, 228) 66px 66px,
+    rgb(31, 141, 228) 67px 67px,
+    rgb(31, 141, 228) 68px 68px,
+    rgb(31, 141, 228) 69px 69px,
+    rgb(31, 141, 228) 70px 70px,
+    rgb(31, 141, 228) 71px 71px,
+    rgb(31, 141, 228) 72px 72px,
+    rgb(31, 141, 229) 73px 73px,
+    rgb(31, 141, 229) 74px 74px,
+    rgb(31, 141, 229) 75px 75px,
+    rgb(31, 141, 229) 76px 76px,
+    rgb(31, 142, 229) 77px 77px,
+    rgb(31, 142, 229) 78px 78px,
+    rgb(31, 142, 229) 79px 79px,
+    rgb(31, 142, 229) 80px 80px,
+    rgb(31, 142, 229) 81px 81px,
+    rgb(31, 142, 230) 82px 82px,
+    rgb(31, 142, 230) 83px 83px,
+    rgb(31, 142, 230) 84px 84px,
+    rgb(31, 142, 230) 85px 85px,
+    rgb(31, 142, 230) 86px 86px,
+    rgb(31, 142, 230) 87px 87px,
+    rgb(31, 142, 230) 88px 88px,
+    rgb(31, 142, 230) 89px 89px,
+    rgb(31, 142, 230) 90px 90px,
+    rgb(31, 142, 231) 91px 91px,
+    rgb(31, 142, 231) 92px 92px,
+    rgb(31, 143, 231) 93px 93px,
+    rgb(31, 143, 231) 94px 94px,
+    rgb(31, 143, 231) 95px 95px,
+    rgb(31, 143, 231) 96px 96px,
+    rgb(31, 143, 231) 97px 97px,
+    rgb(31, 143, 231) 98px 98px,
+    rgb(31, 143, 231) 99px 99px,
+    rgb(31, 143, 232) 100px 100px;
+	}
+	.box.good { 
+		background-color: #4CAF50;
+  text-shadow: rgb(69, 159, 73) 1px 1px,
+    rgb(69, 159, 73) 2px 2px,
+    rgb(69, 159, 73) 3px 3px,
+    rgb(69, 159, 73) 4px 4px,
+    rgb(69, 159, 73) 5px 5px,
+    rgb(69, 159, 73) 6px 6px,
+    rgb(69, 159, 73) 7px 7px,
+    rgb(69, 159, 73) 8px 8px,
+    rgb(69, 159, 73) 9px 9px,
+    rgb(69, 159, 73) 10px 10px,
+    rgb(69, 159, 73) 11px 11px,
+    rgb(69, 159, 73) 12px 12px,
+    rgb(69, 160, 73) 13px 13px,
+    rgb(69, 160, 73) 14px 14px,
+    rgb(69, 160, 73) 15px 15px,
+    rgb(69, 160, 73) 16px 16px,
+    rgb(69, 160, 73) 17px 17px,
+    rgb(69, 160, 73) 18px 18px,
+    rgb(69, 160, 73) 19px 19px,
+    rgb(69, 160, 73) 20px 20px,
+    rgb(69, 160, 73) 21px 21px,
+    rgb(69, 160, 73) 22px 22px,
+    rgb(69, 160, 73) 23px 23px,
+    rgb(69, 160, 73) 24px 24px,
+    rgb(69, 161, 73) 25px 25px,
+    rgb(69, 161, 73) 26px 26px,
+    rgb(69, 161, 73) 27px 27px,
+    rgb(69, 161, 73) 28px 28px,
+    rgb(70, 161, 74) 29px 29px,
+    rgb(70, 161, 74) 30px 30px,
+    rgb(70, 161, 74) 31px 31px,
+    rgb(70, 161, 74) 32px 32px,
+    rgb(70, 161, 74) 33px 33px,
+    rgb(70, 161, 74) 34px 34px,
+    rgb(70, 161, 74) 35px 35px,
+    rgb(70, 161, 74) 36px 36px,
+    rgb(70, 161, 74) 37px 37px,
+    rgb(70, 162, 74) 38px 38px,
+    rgb(70, 162, 74) 39px 39px,
+    rgb(70, 162, 74) 40px 40px,
+    rgb(70, 162, 74) 41px 41px,
+    rgb(70, 162, 74) 42px 42px,
+    rgb(70, 162, 74) 43px 43px,
+    rgb(70, 162, 74) 44px 44px,
+    rgb(70, 162, 74) 45px 45px,
+    rgb(70, 162, 74) 46px 46px,
+    rgb(70, 162, 74) 47px 47px,
+    rgb(70, 162, 74) 48px 48px,
+    rgb(70, 162, 74) 49px 49px,
+    rgb(70, 163, 74) 50px 50px,
+    rgb(70, 163, 74) 51px 51px,
+    rgb(70, 163, 74) 52px 52px,
+    rgb(70, 163, 74) 53px 53px,
+    rgb(70, 163, 74) 54px 54px,
+    rgb(70, 163, 74) 55px 55px,
+    rgb(70, 163, 74) 56px 56px,
+    rgb(70, 163, 74) 57px 57px,
+    rgb(71, 163, 75) 58px 58px,
+    rgb(71, 163, 75) 59px 59px,
+    rgb(71, 163, 75) 60px 60px,
+    rgb(71, 163, 75) 61px 61px,
+    rgb(71, 163, 75) 62px 62px,
+    rgb(71, 164, 75) 63px 63px,
+    rgb(71, 164, 75) 64px 64px,
+    rgb(71, 164, 75) 65px 65px,
+    rgb(71, 164, 75) 66px 66px,
+    rgb(71, 164, 75) 67px 67px,
+    rgb(71, 164, 75) 68px 68px,
+    rgb(71, 164, 75) 69px 69px,
+    rgb(71, 164, 75) 70px 70px,
+    rgb(71, 164, 75) 71px 71px,
+    rgb(71, 164, 75) 72px 72px,
+    rgb(71, 164, 75) 73px 73px,
+    rgb(71, 164, 75) 74px 74px,
+    rgb(71, 165, 75) 75px 75px,
+    rgb(71, 165, 75) 76px 76px,
+    rgb(71, 165, 75) 77px 77px,
+    rgb(71, 165, 75) 78px 78px,
+    rgb(71, 165, 75) 79px 79px,
+    rgb(71, 165, 75) 80px 80px,
+    rgb(71, 165, 75) 81px 81px,
+    rgb(71, 165, 75) 82px 82px,
+    rgb(71, 165, 75) 83px 83px,
+    rgb(71, 165, 75) 84px 84px,
+    rgb(71, 165, 75) 85px 85px,
+    rgb(72, 165, 76) 86px 86px,
+    rgb(72, 165, 76) 87px 87px,
+    rgb(72, 166, 76) 88px 88px,
+    rgb(72, 166, 76) 89px 89px,
+    rgb(72, 166, 76) 90px 90px,
+    rgb(72, 166, 76) 91px 91px,
+    rgb(72, 166, 76) 92px 92px,
+    rgb(72, 166, 76) 93px 93px,
+    rgb(72, 166, 76) 94px 94px,
+    rgb(72, 166, 76) 95px 95px,
+    rgb(72, 166, 76) 96px 96px,
+    rgb(72, 166, 76) 97px 97px,
+    rgb(72, 166, 76) 98px 98px,
+    rgb(72, 166, 76) 99px 99px,
+    rgb(72, 167, 76) 100px 100px;
+	}
+
+.tooltip {
+	min-width: 100px;
+	font-weight: 300;
+	letter-spacing: 0.01rem;
+}
+
+.bugger {
+	color: #F44336;
+	margin: 0 1px;
+	font-size: 80%;
+	position: absolute;
+	left: 51px;
+	top: -10px;
+	-webkit-animation: bug 4s 1;
+	-webkit-transition-timing-function: ease-in-out;
+	opacity: 0;
+}
+@-webkit-keyframes bug {
+	0% { transform: rotate(0deg); opacity: 1; }
+	50% { transform: rotate(360deg); }
+	60% { opacity: 0;}
+	70% { opacity: 1;}
+	75% { opacity: 0;}
+	80% { opacity: 1;}
+	85% { opacity: 0;}
+	100% { transform: rotate(360deg); opacity: 0;}
+}
+
+
+@media (min-width: 1480px){
+	.container {
+	  width: 1510px;
+	}
+}
